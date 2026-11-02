@@ -6,19 +6,30 @@
 
 ## 📖 دليل الاستخدام والتثبيت المفصل (Usage & Installation Guide)
 للاطلاع على دليل الاستخدام الكامل خطوة بخطوة وكيفية استدعاء السكلز وسيناريوهات العمل:
-👉 **[اقرأ دليل الاستخدام التفصيلي (USAGE_GUIDE.md)](USAGE_GUIDE.md)**
+👉 **[اقرأ دليل الاستخدام والتشغيل الكامل (USAGE_GUIDE.md)](USAGE_GUIDE.md)**
 
 ---
 
-## 🚀 التثبيت والمشاركة السريعة (Quick Install & Sharing)
+## 🚀 التثبيت السريع على أنظمة macOS و Windows
 
-لتثبيت هذا البلاجن مع كافة سكلز الموشن جرافيك على أي جهاز كمبيوتر مباشرة عبر الطرفية:
-
+### 🍏 على نظام ماك (macOS):
+افتح تطبيق `Terminal` ونفّذ:
 ```bash
 git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git ~/.gemini/config/plugins/zhr-master-mgraphic-prompt-temp
 ```
 
-أو عبر تنزيل المستودع كملف مضغوط `ZIP` من الواجهة مباشرة ووضعه في مسار الإضافات `~/.gemini/config/plugins/`.
+### 🪟 على نظام ويندوز (Windows):
+افتح `PowerShell` ونفّذ:
+```powershell
+New-Item -ItemType Directory -Force -Path "$HOME\.gemini\config\plugins"
+git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git "$HOME\.gemini\config\plugins\zhr-master-mgraphic-prompt-temp"
+```
+
+أو عبر موجه الأوامر `Command Prompt (CMD)`:
+```cmd
+mkdir "%USERPROFILE%\.gemini\config\plugins" 2>nul
+git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git "%USERPROFILE%\.gemini\config\plugins\zhr-master-mgraphic-prompt-temp"
+```
 
 ---
 
@@ -39,7 +50,7 @@ git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git ~/
 zhr-master-mgraphic-prompt-temp/
 ├── plugin.json                              # بيان تعريف البلاجن
 ├── README.md                                # الوثيقة التعريفية السريعة
-├── USAGE_GUIDE.md                           # دليل الاستخدام والتثبيت والمشاركة الشامل
+├── USAGE_GUIDE.md                           # دليل الاستخدام والتثبيت والمشاركة الشامل (macOS / Windows)
 ├── rules/
 │   └── MOTION_RULES.md                      # القواعد الإخراجية الصارمة والركائز الثلاث
 ├── templates/

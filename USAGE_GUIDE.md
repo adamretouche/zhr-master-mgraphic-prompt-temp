@@ -1,22 +1,27 @@
 # دليل الاستخدام والتثبيت والمشاركة — ZHR MASTER M.GRAPHIC PROMPT TEMP
 
-دليل تشغيلي متكامل يوضح كيفية تثبيت، مشاركة، واستخدام منظومة الموشن جرافيك عبر أي جهاز، وكيفية استدعاء السكلز الخمسة عملياً.
+دليل تشغيلي متكامل يوضح كيفية تثبيت واستخدام منظومة الموشن جرافيك عبر نظامي **macOS** و **Windows**، وكيفية استدعاء السكلز الخمسة عملياً.
 
 ---
 
-## 🚀 أولاً: كيفية تنزيل ومشاركة البلاجن من GitHub إلى أي جهاز آخر
+## 💻 أولاً: تعليمات التثبيت الكاملة على macOS و Windows
 
-بما أن المنظومة مبنية وفق المعايير الرسمية لإضافات Antigravity، يمكن لأي مستخدم تثبيتها ومشاركتها بثلاث طرق سهلة:
+يمكن تثبيت المنظومة إما عبر سطر الأوامر (مستحسن وسريع) أو يدوياً عبر الواجهة الرسومية:
 
-### الطريقة 1: التثبيت الفوري بسطر أوامر واحد (الأسرع والأفضل)
-على جهاز الماك أو لينكس أو ويندوز (عبر Git Bash / WSL)، نفّذ هذا الأمر فقط:
+### 🍏 1. التثبيت على أجهزة ماك (macOS)
+
+#### الطريقة عبر الطرفية (Terminal):
+افتح تطبيق `Terminal` والصق الأوامر التالية:
 
 ```bash
+# 1. إنشاء مسار الإضافات إذا لم يكن موجوداً
+mkdir -p ~/.gemini/config/plugins
+
+# 2. استنساخ المستودع من GitHub
 git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git ~/.gemini/config/plugins/zhr-master-mgraphic-prompt-temp
-```
 
-ثم لربط السكلز عالمياً في المسار المباشر (خطوة إضافية لضمان الظهور الفوري):
-```bash
+# 3. ربط السكلز في المسار العالمي المباشر (لضمان الظهور الفوري في الشات)
+mkdir -p ~/.gemini/config/skills
 cd ~/.gemini/config/plugins/zhr-master-mgraphic-prompt-temp
 for skill in skills/*; do
   ln -sfn "$PWD/$skill" "$HOME/.gemini/config/skills/$(basename $skill)"
@@ -25,18 +30,50 @@ done
 
 ---
 
-### الطريقة 2: التنزيل المباشر كملف مضغوط (ZIP) بدون سطر أوامر
-1. ادخل على رابط المستودع:
+### 🪟 2. التثبيت على أجهزة ويندوز (Windows)
+
+#### الطريقة الأولى عبر PowerShell (مستحسن):
+افتح `PowerShell` والصق الأوامر التالية:
+
+```powershell
+# 1. إنشاء مسار الإضافات
+New-Item -ItemType Directory -Force -Path "$HOME\.gemini\config\plugins"
+
+# 2. استنساخ البلاجن من GitHub
+git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git "$HOME\.gemini\config\plugins\zhr-master-mgraphic-prompt-temp"
+
+# 3. ربط السكلز في المسار المباشر
+New-Item -ItemType Directory -Force -Path "$HOME\.gemini\config\skills"
+Get-ChildItem "$HOME\.gemini\config\plugins\zhr-master-mgraphic-prompt-temp\skills" | ForEach-Object {
+    New-Item -ItemType SymbolicLink -Path "$HOME\.gemini\config\skills\$($_.Name)" -Target $_.FullName -Force
+}
+```
+
+#### الطريقة الثانية عبر موجه الأوامر (Command Prompt - CMD):
+```cmd
+mkdir "%USERPROFILE%\.gemini\config\plugins" 2>nul
+git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git "%USERPROFILE%\.gemini\config\plugins\zhr-master-mgraphic-prompt-temp"
+```
+
+---
+
+### 📦 3. التثبيت اليدوي عبر الواجهة الرسومية (بدون أوامر — لماك وويندوز)
+1. ادخل على رابط المستودع في المتصفح:
    [https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp](https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp)
-2. اضغط على الزر الأخضر **`Code`** ➔ ثم اختر **`Download ZIP`**.
-3. فك الضغط وانقل المجلد الناتج إلى المسار:
-   `~/.gemini/config/plugins/zhr-master-mgraphic-prompt-temp`
+2. انقر على الزر الأخضر **`Code`** ثم اضغط **`Download ZIP`**.
+3. قم بفك ضغط الملف وأعد تسمية المجلد الناتج إلى:
+   `zhr-master-mgraphic-prompt-temp`
+4. انقل المجلد إلى المسار المطابق لنظامك:
+   - **على الماك (macOS):**
+     `~/.gemini/config/plugins/` (يمكنك الضغط على `Cmd + Shift + G` في الفايندر ولصق المسار).
+   - **على ويندوز (Windows):**
+     `C:\Users\<اسم_المستخدم>\.gemini\config\plugins\` (أو اكتب في شريط المسار `%USERPROFILE%\.gemini\config\plugins`).
 
 ---
 
 ## 🎯 ثانياً: شرح السكلز الخمسة وسيناريوهات الاستخدام اليومي
 
-المنظومة مصممة لتعمل تفاعلياً بشكل كامل. لست بحاجة لتعبئة أي قوالب يدوياً؛ بمجرد استدعاء السكل يبدأ الحوار:
+المنظومة مصممة لتعمل تفاعلياً بشكل كامل، فلن تحتاج لتعبئة أي قوالب يدوياً؛ بمجرد طلب نوع الموشن جرافيك سيتولى السكل توجيه الأسئلة:
 
 ### 1. `ZHR MASTER PROMPT SKILL 00: Creative Director` (المخرج الشامل)
 - **متى تستخدمه؟**
@@ -100,7 +137,7 @@ done
 
 ---
 
-## 🛑 ثالثاً: البروتوكول التشغيلي الثلاثي (كيف تضمن أعلى جودة؟)
+## 🛑 ثالثاً: البروتوكول التشغيلي الثلاثي (ضمان أعلى جودة إخراج)
 
 1. **نقطة الاعتماد الصارمة (Approval Checkpoint):**
    - بعد الإجابة على الأسئلة، سيعطيك النظام ملخصاً إخراجياً دقيقاً ولوحة معاينة أولية للمشاهد (*Contact Sheet*).
