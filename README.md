@@ -4,6 +4,24 @@
 
 ---
 
+## 📖 دليل الاستخدام والتثبيت المفصل (Usage & Installation Guide)
+للاطلاع على دليل الاستخدام الكامل خطوة بخطوة وكيفية استدعاء السكلز وسيناريوهات العمل:
+👉 **[اقرأ دليل الاستخدام التفصيلي (USAGE_GUIDE.md)](USAGE_GUIDE.md)**
+
+---
+
+## 🚀 التثبيت والمشاركة السريعة (Quick Install & Sharing)
+
+لتثبيت هذا البلاجن مع كافة سكلز الموشن جرافيك على أي جهاز كمبيوتر مباشرة عبر الطرفية:
+
+```bash
+git clone https://github.com/adamretouche/zhr-master-mgraphic-prompt-temp.git ~/.gemini/config/plugins/zhr-master-mgraphic-prompt-temp
+```
+
+أو عبر تنزيل المستودع كملف مضغوط `ZIP` من الواجهة مباشرة ووضعه في مسار الإضافات `~/.gemini/config/plugins/`.
+
+---
+
 ## 🏛️ الركائز التشغيلية الثلاث المعتمدة (The 3 Core Operational Pillars)
 
 1. **الصرامة المطلقة في نقطة الاعتماد (Strict Approval Gate 🛑):**
@@ -20,7 +38,8 @@
 ```text
 zhr-master-mgraphic-prompt-temp/
 ├── plugin.json                              # بيان تعريف البلاجن
-├── README.md                                # الوثيقة الإرشادية وسيناريوهات الاستخدام
+├── README.md                                # الوثيقة التعريفية السريعة
+├── USAGE_GUIDE.md                           # دليل الاستخدام والتثبيت والمشاركة الشامل
 ├── rules/
 │   └── MOTION_RULES.md                      # القواعد الإخراجية الصارمة والركائز الثلاث
 ├── templates/
