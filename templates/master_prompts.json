@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "archetypes": {
+    "01_educational": {
+      "id": "educational_explainer",
+      "title_ar": "فيديوهات موشن جرافيك تعليمية وتفسيرية",
+      "title_en": "Educational & Scientific Documentary Explainer",
+      "questions": [
+        "ما هو موضوع الفيديو بالتفصيل وما هي النقاط الرئيسية المراد شرحها؟",
+        "من هو الجمهور المستهدف وما هي النبرة البصرية (وثائقي داكن، ملهم، تقني)؟",
+        "هل لديك سكريبت أو تعليق صوتي جاهز، أم ترغب أن أقوم بصياغته؟",
+        "ما هي الأبعاد المطلوبة (16:9 للشاشات واليوتيوب أم 9:16 للريلز)؟",
+        "هل تفضل لوحة ألوان محددة (مثل: كربوني داكن، سيان نيون، وبرتقالي ديناميكي)؟"
+      ],
+      "variables": ["TOPIC", "TARGET_AUDIENCE", "TONE_MOOD", "ASPECT_RATIO", "COLOR_PALETTE", "SCRIPT"],
+      "default_preset": {
+        "fps": 60,
+        "style": "Dark Tech, 4-Layer Architecture, Ken Burns, HUD, Dynamic Kashida",
+        "sfx": ["Sub-bass Drop", "Tech Whoosh", "Data Beep", "Digital Typing"]
+      }
+    },
+    "02_app_demo": {
+      "id": "3d_app_showcase",
+      "title_ar": "ديمو واستعراض التطبيقات والمواقع في مجسمات 3D",
+      "title_en": "Interactive 3D Apple-Style Device Showcase",
+      "questions": [
+        "ما هو اسم التطبيق أو الموقع وما هي أهم 2 إلى 3 ميزات ترغب بإبرازها؟",
+        "ما هو طراز الجهاز المفضل (iPhone 16 Pro Max، MacBook Pro M3، iPad Pro M4)؟",
+        "ما هي بيئة العرض ولون الإضاءة الهوياتي المميز للتطبيق؟",
+        "ما هي الأبعاد المستهدفة (9:16 للريلز أم 16:9 للعروض والموقع)؟",
+        "هل يتوفر سكريبت أو تعليق صوتي مصاحب للحركات والتفاعلات؟"
+      ],
+      "variables": ["APP_NAME", "CORE_FEATURES", "DEVICE_MODEL", "ENVIRONMENT", "ASPECT_RATIO", "ACCENT_COLOR", "SCRIPT"],
+      "default_preset": {
+        "fps": 60,
+        "style": "Apple Keynote, Minimalist Studio, Floating Glass UI Cards, 45-deg Isometric, Simulated Haptic Taps",
+        "sfx": ["Glass Tap", "Smooth Swoosh", "Success Chime", "App Open"]
+      }
+    },
+    "03_kinetic_reel": {
+      "id": "kinetic_reel_collage",
+      "title_ar": "فيديوهات إعلانية وريلز حركية بنمط الكولاج",
+      "title_en": "Kinetic Reel & Rotoscoping Motion Collage",
+      "questions": [
+        "ما هو المنتج أو الخدمة المراد الإعلان عنها؟",
+        "ما هي فكرة الهوك (Hook) لأول 3 ثوانٍ لخطف انتباه المشاهد؟",
+        "ما هي المدة الزمنية المستهدفة (15 ثانية، 30 ثانية)؟",
+        "هل لديك صور حقيقية للمنتج/الأشخاص لتفريغها (Rotoscoping) أم نعتمد على رسوم ومجسمات مولدة؟",
+        "ما هو النمط البصري المفضل (كولاج ورقي عتيق، سايبربانك، ملصقات نيون)؟"
+      ],
+      "variables": ["PRODUCT_SERVICE", "HOOK_3S", "TARGET_PLATFORM", "DURATION", "VISUAL_AESTHETIC", "SCRIPT_BEATS"],
+      "default_preset": {
+        "fps": 60,
+        "style": "Fast-Paced 9:16, Hard Cutout Borders, Text-Behind-Subject, Split-Screens, Beat-drop Sync",
+        "sfx": ["Paper Tear", "Camera Shutter", "Fast Whoosh", "Cash Register Chime"]
+      }
+    },
+    "04_mechanical_cutaway": {
+      "id": "mechanical_cutaway",
+      "title_ar": "شرح الأجهزة والآلات كنموذج مقطوع حركياً",
+      "title_en": "Mechanical Cutaway & Technical Dissection Explainer",
+      "questions": [
+        "ما هو الجهاز أو الآلة المراد تشريحها هندسياً؟",
+        "ما هي المكونات والآليات الداخلية الأساسية التي تريد إبرازها (تروس، صمامات، دورة وقود)؟",
+        "ما هو الأسلوب الفني المطلوب (مخطط تقني Blueprint، ميتاليك واقعي مع خريطة حرارية Heatmap)؟",
+        "ما هي الأبعاد المطلوبة (16:9 للشاشات أم 9:16)؟",
+        "هل لديك خطوات علمية دقيقة لكيفية عمل الآلة تريد تحويلها إلى سكريبت؟"
+      ],
+      "variables": ["MACHINE_DEVICE", "INTERNAL_MECHANISMS", "VISUAL_FINISH", "ASPECT_RATIO", "EXPLANATION_STEPS"],
+      "default_preset": {
+        "fps": 60,
+        "style": "Sectional Laser Slicing, Axial Exploded View, Glowing Fluid/Energy Particle Flow, 3D Tracking Callouts",
+        "sfx": ["Mechanical Click", "Servo Motor Whir", "Laser Hum", "Piston Thump"]
+      }
+    }
+  }
+}
